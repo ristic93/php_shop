@@ -10,7 +10,7 @@ $products = $products->fetchAll();
     <?php foreach ($products as $product) : ?>
         <div class="col-md-4">
             <div class="card">
-                <img src="images/<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="card-img-top">
+                <img src="images/<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="card-img-top" width="150" height="150">
                 <div class="card-body">
                     <h5 class="card-title"><?= $product['name'] ?></h5>
                     <p class="card-text">Size:<?= $product['size'] ?></p>
