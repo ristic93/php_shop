@@ -12,8 +12,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $user_id = $_SESSION['user_id'];
 
+    $quantity = $_POST['quantity'];
+
     $cart = new Cart();
-    $cart->add_to_cart($product_id, $user_id);
+    $cart->add_to_cart($product_id, $user_id, $quantity);
 
     header('location: cart.php');
     exit();
@@ -30,6 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         <p>Size: <?= $product['size']; ?></p>
         <p>Price: $<?= $product['price']; ?></p>
         <form action="" method="POST">
+            <input type="number" name="quantity">
             <button type="submit" class="btn btn-primary">Add to Cart</button>
         </form>
     </div>

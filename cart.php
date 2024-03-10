@@ -18,6 +18,7 @@ $cart_items = $cart->get_cart_items();
             <th scope="col">Product name</th>
             <th scope="col">Size</th>
             <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
             <th scope="col">Image</th>
         </tr>
     </thead>
@@ -26,7 +27,8 @@ $cart_items = $cart->get_cart_items();
             <tr>
                 <td><?= ($item['name']); ?></td>
                 <td><?= ($item['size']); ?></td>
-                <td><?= ($item['price']); ?></td>
+                <td>$<?= ($item['price']); ?></td>
+                <td><?= ($item['quantity']); ?></td>
                 <td><img src="<?= ($item['image']); ?>" alt="<?= ($item['name']); ?>" height="40" width="40"></td>
             </tr>
 
